@@ -78,7 +78,9 @@ header img {
     height: var(--header-height);
 }
 
-
+#otterPic {
+    width: 600px;
+}
 
 content {
     width: 80%;
