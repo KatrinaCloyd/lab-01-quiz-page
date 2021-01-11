@@ -5,5 +5,8 @@ const quizBtn = document.getElementById('takeQuizBtn');
 // set event listeners to update state and DOM
 
 quizBtn.addEventListener('click', () => {
-    console.log('button pushed');
+    alert('Welcome to the Sea Otter Quizzz!');
+
+    confirm('Do you really feel ready for this?');
+
 })
