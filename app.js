@@ -1,5 +1,6 @@
 // import functions and grab DOM elements
 import { countsAsYes } from '../utils.js';
+import { percentage } from '../utils.js';
 
 // initialize state
 const quizBtn = document.getElementById('takeQuizBtn');
@@ -30,5 +31,8 @@ quizBtn.addEventListener('click', () => {
     if (!countsAsYes(ansThree)) {
         correctAnswers++;
     }
-    results.textContent = `${firstName} ${secondName} ${correctAnswers}`;
+
+    const grade = percentage(correctAnswers, 3);
+
+    results.textContent = `Hi. ${firstName} ${secondName}! You got ${correctAnswers} out of 3 questions right. That's a ${grade}%!`;
 });
