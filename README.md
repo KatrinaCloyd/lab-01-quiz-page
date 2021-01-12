@@ -8,12 +8,20 @@ Make A Plan:
 -JS 
     -event listner to button 
         -should confirm "ready for this quiz?"
-        -should prompt 'first name'
-        -should prompt 'last name'
+            -close if no
+        -should prompt 'first name' and save it 
+        -should prompt 'last name' and save it 
+        -create const for correct answers
         -Should ask yes or no question #1 
+            - check if Y 
+            - ++ correct answers if correct 
         -Should ask yes or no question #2 
+            - check if NOT Y 
+            - ++ correct answers if correct 
         -Should ask yes or no question #3
-        -Confirm ready for results 
-    -change text content to show quiz results 
-    
+            - check if NOT Y 
+            - ++ correct answers if correct 
+    -change text content to show user name and quiz results
+    -show percentage correct 
+
 -->

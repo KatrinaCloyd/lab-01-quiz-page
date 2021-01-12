@@ -1,7 +1,9 @@
 // import functions and grab DOM elements
+import { countsAsYes } from '../utils.js';
 
 // initialize state
 const quizBtn = document.getElementById('takeQuizBtn');
+const results = document.getElementById('quizResults');
 // set event listeners to update state and DOM
 
 quizBtn.addEventListener('click', () => {
@@ -11,18 +13,22 @@ quizBtn.addEventListener('click', () => {
     if (!quizConfirm) return;
 
     const firstName = prompt('What is your first name?');
-    console.log(firstName);
-
     const secondName = prompt('What is your last name?');
-    console.log(secondName);
+    let correctAnswers = 0;
 
     const ansOne = prompt('Do sea otters eat sea urchins?');
-    console.log(ansOne);
+    if (countsAsYes(ansOne)) {
+        correctAnswers++;
+    }
 
     const ansTwo = prompt('Do otters hold hands to stay near one another?');
-    console.log(ansTwo);
+    if (!countsAsYes(ansTwo)) {
+        correctAnswers++;
+    }
 
     const ansThree = prompt('Are sea otter pups able to feed themselves?');
-    console.log(ansThree);
-
+    if (!countsAsYes(ansThree)) {
+        correctAnswers++;
+    }
+    results.textContent = `${firstName} ${secondName} ${correctAnswers}`;
 });
