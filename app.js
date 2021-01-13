@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
-import { countsAsYes } from '../utils.js';
-import { percentage } from '../utils.js';
+import { countsAsYes } from './utils.js';
+import { percentage } from './utils.js';
 
 // initialize state
 const quizBtn = document.getElementById('takeQuizBtn');
